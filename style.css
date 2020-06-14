@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+h1 {
+   font-family: "Montserrat", sans-serif;
+   text-transform: uppercase;
+   color: rgb(51, 51, 51);
+   text-align: center;
+   padding: 7rem;
+}
+
+.main {
+   display: flex;
+   justify-content: space-evenly;
+}
+
+.container {
+   width: 800px;
+   height: 500px;
+   position: relative;
+}
+
+.container img {
+   width: 100%;
+   height: 100%;
+}
+
+.container .transition {
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   left: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.container .transition:hover {
+   opacity: 1;
+}
+
+.fade::after {
+   content: "- Path to Heaven -";
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   text-transform: uppercase;
+   font-family: "Montserrat", sans-serif;
+   font-size: 25px;
+   font-weight: 500;
+   background: black;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.fade:hover::after {
+   opacity: 0.5;
+}
+
+@media (max-width: 1700px) {
+   .main {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+   }
+
+   .container {
+      margin-top: 30px;
+   }
+}
+
+@media (max-width: 830px) {
+   .h1 {
+      padding: 3rem;
+   }
+
+   .container {
+      width: 500px;
+      height: 300px;
+   }
+}
